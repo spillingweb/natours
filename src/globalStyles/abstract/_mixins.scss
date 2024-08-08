@@ -1,0 +1,8 @@
+@mixin btnColors($backColor, $txtColor) {
+  background-color: $backColor;
+  color: $txtColor;
+
+  &::after {
+    background-color: $backColor;
+  }
+}

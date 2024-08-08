@@ -1,5 +1,5 @@
 import { PropsWithChildren } from "react";
-import classes from "./Button.module.scss";
+import styles from "./Button.module.scss";
 
 type ButtonProps = {
   color: string;
@@ -7,13 +7,13 @@ type ButtonProps = {
 };
 
 const Button = (props: PropsWithChildren<ButtonProps>) => {
-  const colorClass = props.color === "white" ? classes.white : classes.green;
-  const animatedClass = props.animated ? classes.animated : '';
+  const colorClass = props.color === "white" ? styles.white : styles.green;
+  const animatedClass = props.animated ? styles.animated : '';
 
   return (
     <a
       href="#"
-      className={`${classes.btn} ${colorClass} ${animatedClass}`}
+      className={`${styles.btn} ${colorClass} ${animatedClass}`}
     >
       {props.children}
     </a>
