@@ -1,0 +1,20 @@
+@use '../../globalStyles/abstract/variables' as *;
+
+.headingLarge {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  display: inline-block;
+  background: linear-gradient(to right, $primaryLight, $primaryDark);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  transition: all .2s;
+
+  text-align: center;
+
+  &:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: .5rem 1rem 2rem rgba(0,0,0,.2);
+  }
+}

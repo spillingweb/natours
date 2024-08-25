@@ -1,0 +1,25 @@
+@use "../../globalStyles/abstract/variables" as *;
+
+.secondaryButton {
+  &:link,
+  &:visited {
+    color: $primary;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid $primary;
+    padding: 0.3rem;
+    transition: all .2s;
+  }
+
+  &:hover {
+    background-color: $primary;
+    color: $white;
+    transform: translateY(-0.2rem);
+    box-shadow: 0 1rem 2rem rgba($black, 0.25);
+  }
+
+  &:active {
+    box-shadow: 0 .5rem 1rem rgba($black, 0.15);
+    transform: translateY(0);
+  }
+}

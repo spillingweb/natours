@@ -1,0 +1,30 @@
+@use "../../globalStyles/abstract/variables" as *;
+
+.cardContainer {
+  background: rgba($white, 0.8);
+  font-size: 1.5rem;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 1.5rem 4rem rgba($black, 0.15);
+  border-radius: 0.3rem;
+  transition: all 0.3s;
+
+  &:not(:last-child) {
+    margin-right: 6rem;
+  }
+
+  &:hover {
+    transform: scale(1.03) translateY(-1.5rem);
+  }
+
+  i {
+    margin-bottom: .5rem;
+    font-size: 6rem;
+    display: inline-block;
+    background-image: linear-gradient(to right, $primaryLight, $primaryDark);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+}
+

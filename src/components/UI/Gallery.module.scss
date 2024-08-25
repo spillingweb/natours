@@ -1,0 +1,40 @@
+@use '../../globalStyles/abstract/variables' as *;
+
+.composition {
+  position: relative;
+
+  &:hover .galleryImage:not(:hover) {
+    transform: scale(.95);
+  }
+}
+
+.galleryImage {
+  width: 55%;
+  box-shadow: 0 1.5rem 4rem rgba($black,0.4);
+  border-radius: 2px;
+  position: absolute;
+  outline-offset: 2rem;
+  transition: all 0.2s;
+
+  &:hover {
+    outline: 1.5rem solid #55c57a;
+    transform: scale(1.05) translateY(-.5rem);
+    box-shadow: 0 2.5rem 4rem rgba($black,0.5);
+    z-index: 20;
+  }
+}
+
+.image1 {
+    top: -2rem;
+    left: 0
+}
+
+.image2 {
+    top: 2rem;
+    right: 0;
+}
+
+.image3 {
+    top: 10rem;
+    left: 20%;
+}
