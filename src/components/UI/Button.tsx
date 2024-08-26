@@ -3,7 +3,7 @@ import styles from "./Button.module.scss";
 
 type ButtonProps = {
   color: string;
-  animated: boolean;
+  animated?: boolean;
 };
 
 const Button = (props: PropsWithChildren<ButtonProps>) => {

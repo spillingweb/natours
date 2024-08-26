@@ -1,5 +1,5 @@
 import styles from "./Features.module.scss";
-import IconCard from "./UI/IconCard";
+import IconCard from "./IconCard";
 
 const DUMMY_CARDS = [
   {

@@ -1,0 +1,151 @@
+@use "../../globalStyles/abstract/variables" as *;
+
+.container {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  width: 35rem;
+
+  .cardSide {
+    height: 52rem;
+    transition: all 0.8s ease;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($black, 0.15);
+  }
+
+  &:not(:last-child) {
+    margin-right: 6rem;
+  }
+
+  &:hover .front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover .back {
+    transform: rotateY(0);
+  }
+}
+
+.front {
+  background-color: $white;
+
+  .cardPicture {
+    position: relative;
+    height: 23rem;
+    background-size: cover;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+
+  .cardTitle {
+    color: $white;
+    background-blend-mode: screen;
+    text-transform: uppercase;
+    text-align: right;
+    font-weight: 300;
+    font-size: 2.8rem;
+    padding: 1rem 1.5rem;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 75%;
+    
+    span {
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+      padding: 1rem 1.5rem;
+    }
+  }
+
+  .featuresList {
+    list-style: none;
+    padding: 3rem;
+    margin: 0 auto;
+    width: 80%;
+    
+    li {
+      padding: 1rem;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $greyLight2;
+      }
+    }
+  }
+}
+
+.back {
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  .price {
+    color: $white;
+    font-size: 1.4rem;
+    margin: 13rem 0 10rem 0;
+
+    span {
+      display: block;
+      font-size: 6rem;
+      font-weight: 100;
+    }
+  }
+}
+
+.tour1 {
+  .cardPicture {
+    background-image: $gradientOrange, url(../../assets/img/nat-5.jpg);
+  }
+
+  .cardTitle > span {
+    background: linear-gradient(
+      to right bottom,
+      rgba($orangeLight, 0.85),
+      rgba($orangeDark, 0.85)
+    );
+  }
+
+  .back {
+    background: $gradientOrange;
+  }
+}
+
+.tour2 {
+  .cardPicture {
+    background-image: $gradientGreen, url(../../assets/img/nat-6.jpg);
+  }
+
+  .cardTitle > span {
+    background: linear-gradient(
+      to right bottom,
+      rgba($primaryLight, 0.85),
+      rgba($primaryDark, 0.85)
+    );
+  }
+
+  .back {
+    background: $gradientGreen;
+  }
+}
+
+.tour3 {
+  .cardPicture {
+    background-image: $gradientBlue, url(../../assets/img/nat-7.jpg);
+  }
+
+  .cardTitle > span {
+    background: linear-gradient(
+      to right bottom,
+      rgba($blueLight, 0.85),
+      rgba($blueDark, 0.85)
+    );
+  }
+
+  .back {
+    background: $gradientBlue;
+  }
+}

@@ -1,4 +1,4 @@
-@use '../globalStyles/abstract/variables';
+@use '../../globalStyles/abstract/variables';
 
 .header {
   height: 95vh;
@@ -7,11 +7,11 @@
       rgba(variables.$primaryLight, 0.801),
       rgba(variables.$primaryDark, 0.801)
     ),
-    url(../assets/img/hero.jpg);
+    url(../../assets/img/hero.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
-
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 

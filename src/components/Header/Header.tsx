@@ -1,5 +1,5 @@
-import Logo from "../assets/img/logo-white.png";
-import Button from "./UI/Button";
+import Logo from "../../assets/img/logo-white.png";
+import Button from "../UI/Button";
 import styles from "./Header.module.scss";
 
 const Header: React.FC = () => {

@@ -1,4 +1,4 @@
-import HeadingSmall from "./HeadingSmall";
+import HeadingSmall from "../UI/HeadingSmall";
 import styles from "./IconCard.module.scss";
 
 type CardProps = {

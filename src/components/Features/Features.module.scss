@@ -1,4 +1,4 @@
-@use "../globalStyles/abstract/variables" as *;
+@use "../../globalStyles/abstract/variables" as *;
 
 .features {
   padding: 20rem 0;
@@ -7,7 +7,7 @@
       rgba($primaryLight, 0.8),
       rgba($primaryDark, 0.8)
     ),
-    url(../assets/img/nat-4.jpg);
+    url(../../assets/img/nat-4.jpg);
   background-size: cover;
   background-position: left;
   margin-top: -12rem;

@@ -2,7 +2,20 @@ $primary: #55c57a;
 $primaryLight: #7ed56f;
 $primaryDark: #28b485;
 
+$orangeLight: #ffb900;
+$orangeDark: #ff7730;
+
+$blueLight: #2998ff;
+$blueDark: #5643fa;
+
 $white: #fff;
 $greyLight1: #f7f7f7;
+$greyLight2: #eee;
 $greyDark: #777;
 $black: #000;
+
+$gradientOrange: linear-gradient(to right bottom, $orangeLight, $orangeDark);
+
+$gradientBlue: linear-gradient(to right bottom, $blueLight, $blueDark);
+
+$gradientGreen: linear-gradient(to right bottom, $primaryLight, $primaryDark);

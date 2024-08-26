@@ -1,11 +1,11 @@
 import styles from "./About.module.scss";
-import HeadingLarge from "./UI/HeadingLarge";
-import HeadingSmall from "./UI/HeadingSmall";
-import Photo1 from "../assets/img/nat-1-large.jpg";
-import Photo2 from "../assets/img/nat-2-large.jpg";
-import Photo3 from "../assets/img/nat-3-large.jpg";
-import ButtonSec from "./UI/ButtonSec";
-import Gallery from "./UI/Gallery";
+import HeadingLarge from "../UI/HeadingLarge";
+import HeadingSmall from "../UI/HeadingSmall";
+import Photo1 from "../../assets/img/nat-1-large.jpg";
+import Photo2 from "../../assets/img/nat-2-large.jpg";
+import Photo3 from "../../assets/img/nat-3-large.jpg";
+import ButtonSec from "../UI/ButtonSec";
+import Gallery from "./Gallery";
 
 const DUMMY_PHOTOS = [
   {
