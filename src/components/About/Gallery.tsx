@@ -1,12 +1,7 @@
 import styles from "./Gallery.module.scss";
+import { photoObject } from "../../dummyData";
 
-type image = {
-  id: string;
-  src: string;
-  alt: string;
-};
-
-const Gallery: React.FC<{ images: image[] }> = ({ images }) => {
+const Gallery: React.FC<{ images: photoObject[] }> = ({ images }) => {
   return (
     <div className={styles.composition}>
       {images.map((image, index) => {

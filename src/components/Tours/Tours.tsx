@@ -1,7 +1,7 @@
 import HeadingLarge from "../UI/HeadingLarge";
 import styles from "./Tours.module.scss";
 import TourCard from "./TourCard";
-import { DUMMY_TOURS } from "../../tours";
+import { DUMMY_TOURS } from "../../dummyData";
 import Button from "../UI/Button";
 
 const Tours: React.FC = () => {

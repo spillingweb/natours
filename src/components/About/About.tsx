@@ -1,29 +1,9 @@
 import styles from "./About.module.scss";
 import HeadingLarge from "../UI/HeadingLarge";
 import HeadingSmall from "../UI/HeadingSmall";
-import Photo1 from "../../assets/img/nat-1-large.jpg";
-import Photo2 from "../../assets/img/nat-2-large.jpg";
-import Photo3 from "../../assets/img/nat-3-large.jpg";
+import { DUMMY_PHOTOS } from "../../dummyData";
 import ButtonSec from "../UI/ButtonSec";
 import Gallery from "./Gallery";
-
-const DUMMY_PHOTOS = [
-  {
-    id: "photo1",
-    src: Photo1,
-    alt: "Mountains nature",
-  },
-  {
-    id: "photo2",
-    src: Photo2,
-    alt: "Bicycling in nature",
-  },
-  {
-    id: "photo3",
-    src: Photo3,
-    alt: "Hiking in nature",
-  },
-];
 
 const About: React.FC = () => {
   return (

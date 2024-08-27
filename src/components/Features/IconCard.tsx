@@ -1,20 +1,15 @@
 import HeadingSmall from "../UI/HeadingSmall";
 import styles from "./IconCard.module.scss";
+import { cardObject } from "../../dummyData";
 
-type CardProps = {
-  icon: string;
-  title: string;
-  text: string;
-};
-
-const IconCard: React.FC<CardProps> = ({ icon, title, text }) => {
+const IconCard: React.FC<{cardData: cardObject}> = ({ cardData }) => {
   return (
     <div className={styles.cardContainer}>
-      <i className={`icon-basic-${icon}`}></i>
+      <i className={`icon-basic-${cardData.icon}`}></i>
       <div className="margin-bottom-small">
-        <HeadingSmall>{title}</HeadingSmall>
+        <HeadingSmall>{cardData.title}</HeadingSmall>
       </div>
-      <p>{text}</p>
+      <p>{cardData.text}</p>
     </div>
   );
 };

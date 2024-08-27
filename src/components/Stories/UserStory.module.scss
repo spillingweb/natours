@@ -1,0 +1,65 @@
+@use "../../globalStyles/abstract/variables" as *;
+
+.storyContainer {
+  width: 75%;
+  margin: 0 auto;
+  background: rgba($white, 0.6);
+  border-radius: 3px;
+  padding: 6rem;
+  padding-left: 9rem;
+  box-shadow: 0 3rem 6rem rgba($black, 0.1);
+  transform: skewX(-12deg);
+
+  &:not(:last-child) {
+    margin-bottom: 5rem;
+  }
+
+  &:hover .image {
+    filter: blur(3px) brightness(80%);
+    transform: scale(1);
+  }
+
+  &:hover .name {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+
+.imgContainer {
+  height: 15rem;
+  width: 15rem;
+  float: left;
+  transform: translateX(-3rem) skewX(12deg);
+  -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+  -webkit-shape-outside: circle(50% at 50% 50%);
+  shape-outside: circle(50% at 50% 50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  .image {
+    height: 100%;
+    transition: all 0.5s;
+    transform: scale(1.4);
+  }
+
+  .name {
+    position: absolute;
+    font-size: 1.7rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: $white;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    opacity: 0;
+    text-align: center;
+    backface-visibility: hidden;
+  }
+}
+
+.textContainer {
+    transform: skewX(12deg);
+}
