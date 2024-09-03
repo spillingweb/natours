@@ -7,7 +7,7 @@ import Gallery from "./Gallery";
 
 const About: React.FC = () => {
   return (
-    <section className={styles.about}>
+    <section id="about" className={styles.about}>
       <div className="center-text">
         <HeadingLarge className="margin-bottom-large">Exciting Tours For Adventurous People</HeadingLarge>
       </div>

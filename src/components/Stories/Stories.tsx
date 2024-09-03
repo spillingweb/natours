@@ -10,7 +10,7 @@ import BgVideo from "./BgVideo";
 
 const Stories: React.FC = () => {
   return (
-    <section className={styles.stories}>
+    <section id="stories" className={styles.stories}>
       <BgVideo videoArray={BG_VIDEOS} />
       <div className="center-text">
         <HeadingLarge className="margin-bottom-large">

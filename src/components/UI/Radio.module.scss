@@ -1,0 +1,49 @@
+@use "../../globalStyles/abstract/variables" as *;
+
+.radioGroup {
+  display: inline-block;
+  width: 50%;
+}
+
+.radioInput {
+  display: none;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  .radioBtn {
+    height: 3rem;
+    width: 3rem;
+    border: 5px solid $primary;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 1rem;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 1.3rem;
+      width: 1.3rem;
+      border-radius: 50%;
+      background-color: $primary;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+  }
+}
+
+.radioInput:checked ~ .radioLabel .radioBtn::after {
+  opacity: 1;
+}

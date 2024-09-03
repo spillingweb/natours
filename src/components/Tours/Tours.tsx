@@ -6,7 +6,7 @@ import Button from "../UI/Button";
 
 const Tours: React.FC = () => {
   return (
-    <section className={`${styles.tours} center-text`}>
+    <section id="tours" className={`${styles.tours} center-text`}>
       <HeadingLarge className="margin-bottom-large">
         Most Popular Tours
       </HeadingLarge>
@@ -16,7 +16,7 @@ const Tours: React.FC = () => {
           <TourCard key={tour.id} tourData={tour} />
         ))}
       </div>
-      <Button color="green">Discover all Tours</Button>
+      <Button element="anchor" href="#" color="green">Discover all Tours</Button>
     </section>
   );
 };

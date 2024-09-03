@@ -4,7 +4,7 @@ import { DUMMY_CARDS } from "../../dummyData";
 
 const Features: React.FC = () => {
   return (
-    <section className={styles.features}>
+    <section id="features" className={styles.features}>
       <div className={styles.featureCards}>
         {DUMMY_CARDS.map((card) => (
           <IconCard key={card.id} cardData={card} />

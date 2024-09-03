@@ -13,7 +13,7 @@ const Header: React.FC = () => {
           <span className={styles.headingMain}>Outdoors</span>
           <span className={styles.headingSub}>is where life happens</span>
         </h1>
-        <Button color="white" animated>
+        <Button element="anchor" href="#tours" color="white" animated>
           Discover our tours
         </Button>
       </div>

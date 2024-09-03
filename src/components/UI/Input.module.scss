@@ -1,0 +1,44 @@
+@use "../../globalStyles/abstract/variables" as *;
+
+.inputElement {
+  width: 100%;
+  display: block;
+  border: none;
+  padding: 1.5rem 2rem;
+  font-size: 1.5rem;
+  font-family: inherit;
+  color: inherit;
+  transition: all 0.3s;
+  border-radius: 2px;
+  background-color: rgba($white, 0.5);
+  border-bottom: 3px solid transparent;
+
+  &::-webkit-input-placeholder {
+    color: $greyDark2;
+  }
+
+  &:focus {
+    outline: none;
+    border-bottom: 3px solid rgba($primary, 1);
+    box-shadow: 0 1.5rem 4rem rgba($black, 0.15);
+
+    &:invalid {
+      border-bottom: 3px solid rgba($orangeDark, 1);
+    }
+  }
+}
+
+.inputLabel {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: .7rem;
+  transition: all .3s;
+}
+
+.inputElement:placeholder-shown + .inputLabel {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-4rem);
+}
