@@ -4,7 +4,7 @@ import styles from "./Header.module.scss";
 
 const Header: React.FC = () => {
   return (
-    <header className={styles.header}>
+    <header id="header" className={styles.header}>
       <div className={styles.logoBox}>
         <img src={Logo} alt="Natours Logo" className={styles.logo} />
       </div>

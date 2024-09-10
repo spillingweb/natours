@@ -1,10 +1,15 @@
 @use "../../globalStyles/abstract/variables" as *;
+@use "../../globalStyles/abstract/mixins" as *;
 
 .footer {
   background-color: $greyDark3;
   color: $greyLight1;
   padding: 10rem 0;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
+
+  @include respond(tab-land) {
+    padding: 8rem 2rem;
+  }
 }
 
 .logoContainer {
@@ -17,10 +22,15 @@
 }
 
 .info {
-  max-width: 114rem;
+  max-width: $maxWidth;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+
+  @include respond(tab-port) {
+    flex-direction: column;
+    align-items: center;
+  }
 
   &Section {
     border-top: 0.1rem solid $greyLight2;
@@ -32,6 +42,10 @@
 .footerNav {
   list-style: none;
   display: flex;
+
+  @include respond(tab-port) {
+    margin-bottom: 3rem;
+  }
 
   li {
     &:not(:last-child) {

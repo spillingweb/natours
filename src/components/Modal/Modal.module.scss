@@ -1,0 +1,120 @@
+@use "../../globalStyles/abstract/variables" as *;
+@use "../../globalStyles/abstract/mixins" as *;
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  backdrop-filter: blur(10px) brightness(60%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 30;
+  opacity: 0;
+  visibility: hidden;
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+
+    .modalContainer {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+.modalContainer {
+  width: 75%;
+  background-color: $white;
+  box-shadow: 0 2rem 4rem rgba($black, 0.2);
+  border-radius: 3px;
+  display: flex;
+  overflow: hidden;
+  transform: scale(0);
+  opacity: 0;
+  transition: all 0.5s 0.2s;
+
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
+}
+
+.imgGallery {
+  flex: 0 0 25%;
+  display: flex;
+  flex-direction: column;
+
+  @include respond(tab-port) {
+    display: none;
+  }
+  
+  .img1 {
+    background: url(../../assets/img/nat-8.jpg);
+  }
+
+  .img2 {
+    background: url(../../assets/img/nat-9.jpg);
+  }
+
+  .img1,
+  .img2 {
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+  }
+}
+
+.modalContent {
+  padding: 3rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+
+  h2 {
+    align-self: flex-start;
+  }
+
+  p {
+    font-size: 1.4rem;
+
+    -moz-column-count: 2;
+    -moz-column-gap: 4rem;
+    -moz-column-rule: 1px solid $greyLight2;
+    column-count: 2;
+    column-gap: 4rem;
+    column-rule: 1px solid $greyLight2;
+
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+
+    @include respond(tab-port) {
+      column-count: auto;
+      max-height: 30rem;
+      overflow: scroll;
+    }
+  }
+
+  .modalClose {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      font-size: 3rem;
+      color: $greyDark1;
+      position: absolute;
+      line-height: 1;
+      top: 2.5rem;
+      right: 2.5rem;
+      display: inline-block;
+    }
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}

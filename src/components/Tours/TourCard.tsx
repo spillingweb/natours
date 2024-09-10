@@ -42,7 +42,7 @@ const TourCard: React.FC<{ tourData: tourObject }> = ({ tourData }) => {
         <div className={styles.price}>
           ONLY <span>${tourData.price}</span>
         </div>
-        <Button element="anchor" href="#booking" color="white">Book Now!</Button>
+        <Button element="anchor" href="#modal" color="white">Book Now!</Button>
       </div>
     </div>
   );

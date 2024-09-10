@@ -1,3 +1,5 @@
+@use "../abstract/mixins" as *;
+
 *,
 *::after,
 *::before {
@@ -7,9 +9,21 @@
 }
 
 html {
-  // Defines what 1 rem is
-  font-size: 62.5%;
   scroll-behavior: smooth;
+  // Define what 1 rem is, relative to universal em of 16px
+  font-size: 62.5%; // 1rem = 10px, 10/16 = 62.5%
+
+  @include respond(tab-land) {
+    font-size: 60%;
+  }
+
+  @include respond(tab-port) {
+    font-size: 55%;
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%;
+  }
 }
 
 body {

@@ -1,4 +1,5 @@
 @use "../../globalStyles/abstract/variables" as *;
+@use "../../globalStyles/abstract/mixins" as *;
 
 .features {
   padding: 20rem 0;
@@ -12,9 +13,12 @@
   background-position: left;
   margin-top: -12rem;
   transform: skewY(-7deg);
-
   display: flex;
   justify-content: center;
+
+  @include respond(tab-land) {
+    padding: 12rem 2rem;
+  }
 
   & > * {
     transform: skewY(7deg);
@@ -23,5 +27,16 @@
 
 .featureCards {
   display: flex;
-  max-width: 114rem;
+  max-width: $maxWidth;
+  gap: 3rem;
+
+  @include respond(tab-port) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @include respond(tab-port) {
+    flex-direction: column;
+    max-width: 50rem;
+  }
 }

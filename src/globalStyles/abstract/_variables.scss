@@ -1,3 +1,7 @@
+@use '../abstract/mixins' as *;
+
+// COLORS
+
 $primary: #55c57a;
 $primaryLight: #7ed56f;
 $primaryDark: #28b485;
@@ -22,3 +26,7 @@ $gradientOrange: linear-gradient(to right bottom, $orangeLight, $orangeDark);
 $gradientBlue: linear-gradient(to right bottom, $blueLight, $blueDark);
 
 $gradientGreen: linear-gradient(to right bottom, $primaryLight, $primaryDark);
+
+// CONSTANTS
+
+$maxWidth: 114rem;

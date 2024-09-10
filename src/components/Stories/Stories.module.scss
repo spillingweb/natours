@@ -1,9 +1,22 @@
+@use '../../globalStyles/abstract/variables' as *;
+@use '../../globalStyles/abstract/mixins' as *;
+
 .stories {
     position: relative;
     padding: 15rem 0;
+    scroll-margin-top: -10rem;
+
+    @include respond(tab-land) {
+        padding: 10rem 2rem;
+        line-height: 1.5;
+    }
 }
 
 .userStories {
-    max-width: 114rem;
+    max-width: $maxWidth;
     margin: 0 auto;
+
+    @include respond(tab-port) {
+        max-width: 70rem;
+    }
 }

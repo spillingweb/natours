@@ -1,8 +1,13 @@
 @use "../../globalStyles/abstract/variables" as *;
+@use "../../globalStyles/abstract/mixins" as *;
 
 .booking {
   padding: 15rem 0;
   background-image: $gradientGreen;
+
+  @include respond(tab-land) {
+    padding: 2rem;
+  }
 }
 
 .container {
@@ -15,15 +20,54 @@
     url(../../assets/img/nat-10.jpg);
   background-size: cover;
   border-radius: 3px;
-  width: 114rem;
+  max-width: $maxWidth;
   margin: 0 auto;
   padding: 6rem;
+
+  @include respond(tab-land) {
+    background-image: linear-gradient(
+        105deg,
+        rgba($white, 0.9) 0%,
+        rgba($white, 0.9) 60%,
+        transparent 60%
+      ),
+      url(../../assets/img/nat-10.jpg);
+  }
+
+  @include respond(tab-port) {
+    background-image: linear-gradient(
+        105deg,
+        rgba($white, 0.9) 0%,
+        rgba($white, 0.9) 70%,
+        transparent 70%
+      ),
+      url(../../assets/img/nat-10.jpg);
+      padding: 5rem;
+  }
+
+  @include respond(phone) {
+    background-image: url(../../assets/img/nat-10.jpg);
+    background-color: rgba($white, 0.9);
+    background-blend-mode: screen;
+  }
 }
 
 .form {
   width: 40%;
   display: flex;
   flex-direction: column;
+
+  @include respond(tab-land) {
+    width: 50%;
+  }
+
+  @include respond(tab-port) {
+    width: 70%;
+  }
+
+  @include respond(phone) {
+    width: 100%;
+  }
 
   button {
     align-self: flex-start;

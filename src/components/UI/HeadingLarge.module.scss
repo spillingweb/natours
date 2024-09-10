@@ -1,4 +1,5 @@
 @use '../../globalStyles/abstract/variables' as *;
+@use '../../globalStyles/abstract/mixins' as *;
 
 .headingLarge {
   font-size: 3.5rem;
@@ -11,10 +12,12 @@
   letter-spacing: 0.2rem;
   transition: all .2s;
 
-  text-align: center;
-
-  &:hover {
-    transform: skewY(2deg) skewX(15deg) scale(1.1);
-    text-shadow: .5rem 1rem 2rem rgba(0,0,0,.2);
+  @include respond(tab-port) {
+    font-size: 3rem;
   }
+
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
+
 }

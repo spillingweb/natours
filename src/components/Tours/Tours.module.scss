@@ -1,12 +1,26 @@
 @use "../../globalStyles/abstract/variables" as *;
+@use "../../globalStyles/abstract/mixins" as *;
 
 .tours {
-    background-color: $greyLight1;
-    padding: 25rem 0 15rem 0;
-    margin-top: -12rem;
+  background-color: $greyLight1;
+  padding: 25rem 0 15rem 0;
+  margin-top: -12rem;
+  scroll-margin-top: -17rem;
+
+  @include respond(tab-land) {
+    padding: 20rem 2rem 10rem 2rem;
+  }
 }
 
 .tourCards {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 114rem;
+  margin: 0 auto;
+
+  @include respond(tab-port) {
+    flex-direction: column;
+    max-width: 50rem;
+  }
 }

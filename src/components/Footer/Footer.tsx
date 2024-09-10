@@ -1,11 +1,24 @@
 import styles from "./Footer.module.scss";
-import LogoBig from "../../assets/img/logo-green-1x.png";
+import LogoSmall1x from "../../assets/img/logo-green-small-1x.png";
+import LogoSmall2x from "../../assets/img/logo-green-small-2x.png";
+import LogoBig1x from "../../assets/img/logo-green-1x.png";
+import LogoBig2x from "../../assets/img/logo-green-2x.png";
 
 const Footer: React.FC = () => {
   return (
     <footer id="footer" className={styles.footer}>
       <div className={`${styles.logoContainer} margin-bottom-large`}>
-        <img src={LogoBig} alt="Natours Logo Green" className={styles.logo} />
+        <picture>
+          <source
+            srcSet={`${LogoSmall1x} 1x, ${LogoSmall2x} 2x`}
+            media="(max-width: 37.5em) "
+          />
+          <img
+            srcSet={`${LogoBig1x} 1x, ${LogoBig2x} 2x`}
+            alt="Natours Logo Green"
+            className={styles.logo}
+          />
+        </picture>
       </div>
       <div className={styles.info}>
         <div className={styles.infoSection}>

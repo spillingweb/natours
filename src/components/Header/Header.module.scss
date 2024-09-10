@@ -1,11 +1,12 @@
-@use '../../globalStyles/abstract/variables';
+@use "../../globalStyles/abstract/variables" as *;
+@use "../../globalStyles/abstract/mixins" as *;
 
 .header {
   height: 95vh;
   background-image: linear-gradient(
       to right bottom,
-      rgba(variables.$primaryLight, 0.801),
-      rgba(variables.$primaryDark, 0.801)
+      rgba($primaryLight, 0.801),
+      rgba($primaryDark, 0.801)
     ),
     url(../../assets/img/hero.jpg);
   background-size: cover;
@@ -13,6 +14,11 @@
   position: relative;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  @include respond(phone) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
 }
 
 .logoBox {
@@ -34,7 +40,7 @@
 }
 
 .heading {
-  color: variables.$white;
+  color: $white;
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 6rem;
@@ -46,6 +52,11 @@
   font-weight: 400;
   letter-spacing: 3.5rem;
   animation: moveInLeft 1s ease-out;
+
+  @include respond(phone) {
+    letter-spacing: 0.5rem;
+    font-size: 5rem;
+  }
 }
 
 .headingSub {
@@ -54,6 +65,10 @@
   font-weight: 700;
   letter-spacing: 1.75rem;
   animation: moveInRight 1s ease-out;
+
+  @include respond(phone) {
+    letter-spacing: 0.5rem;
+  }
 }
 
 @keyframes moveInLeft {
