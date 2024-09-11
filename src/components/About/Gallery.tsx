@@ -25,8 +25,10 @@ const Gallery: React.FC<{ images: photoObject[] }> = ({ images }) => {
           <img
             key={image.id}
             className={`${styles.galleryImage} ${imageStyle}`}
-            src={image.src}
+            srcSet={`${image.src.small} 300w, ${image.src.large} 1000w`}
+            sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 18.75em"
             alt={image.alt}
+            src={image.src.large}
           />
         );
       })}

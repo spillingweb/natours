@@ -1,27 +1,42 @@
-import Photo1 from "./assets/img/nat-1-large.jpg";
-import Photo2 from "./assets/img/nat-2-large.jpg";
-import Photo3 from "./assets/img/nat-3-large.jpg";
+import Photo1S from "./assets/img/nat-1.jpg";
+import Photo1L from "./assets/img/nat-1-large.jpg";
+import Photo2S from "./assets/img/nat-2.jpg";
+import Photo2L from "./assets/img/nat-2-large.jpg";
+import Photo3S from "./assets/img/nat-3.jpg";
+import Photo3L from "./assets/img/nat-3-large.jpg";
 
 export type photoObject = {
   id: string;
-  src: string;
+  src: {
+    large: string;
+    small: string;
+  };
   alt: string;
-}
+};
 
 export const DUMMY_PHOTOS = [
   {
     id: "photo1",
-    src: Photo1,
+    src: {
+      large: Photo1L,
+      small: Photo1S,
+    },
     alt: "Mountains nature",
   },
   {
     id: "photo2",
-    src: Photo2,
+    src: {
+      large: Photo2L,
+      small: Photo2S,
+    },
     alt: "Bicycling in nature",
   },
   {
     id: "photo3",
-    src: Photo3,
+    src: {
+      large: Photo3L,
+      small: Photo3S,
+    },
     alt: "Hiking in nature",
   },
 ];
@@ -31,7 +46,7 @@ export type cardObject = {
   icon: string;
   title: string;
   text: string;
-}
+};
 
 export const DUMMY_CARDS: cardObject[] = [
   {

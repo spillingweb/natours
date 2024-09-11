@@ -17,6 +17,7 @@ const Footer: React.FC = () => {
             srcSet={`${LogoBig1x} 1x, ${LogoBig2x} 2x`}
             alt="Natours Logo Green"
             className={styles.logo}
+            src={LogoBig2x}
           />
         </picture>
       </div>

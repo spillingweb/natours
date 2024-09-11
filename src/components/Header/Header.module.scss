@@ -8,12 +8,23 @@
       rgba($primaryLight, 0.801),
       rgba($primaryDark, 0.801)
     ),
-    url(../../assets/img/hero.jpg);
+    url(../../assets/img/hero-small.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+    (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+    (min-width: 125em) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($primaryLight, 0.801),
+        rgba($primaryDark, 0.801)
+      ),
+      url(../../assets/img/hero.jpg);
+  }
 
   @include respond(phone) {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
@@ -42,6 +53,7 @@
 .heading {
   color: $white;
   text-transform: uppercase;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   margin-bottom: 6rem;
 }

@@ -22,15 +22,18 @@
   @include respond(tab-port) {
     display: flex;
     flex-direction: column;
-    box-shadow: 0 1.5rem 4rem rgba($black, 0.15);
-    border-radius: 3px;
     width: 100%;
-    background-color: $white;
 
     &:not(:last-child) {
       margin-right: 0;
       margin-bottom: 5rem;
     }
+  }
+
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
+    background-color: $white;
+    box-shadow: 0 1.5rem 4rem rgba($black, 0.15);
+    border-radius: 3px;
 
     &:hover .front {
       transform: none;
@@ -40,12 +43,13 @@
   .cardSide {
     height: 52rem;
     transition: all 0.8s ease;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-radius: 3px;
     overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba($black, 0.15);
 
-    @include respond(tab-port) {
+    @media only screen and (max-width: 56.25em), only screen and (hover: none) {
       height: auto;
       transition: none;
       box-shadow: none;
@@ -139,7 +143,7 @@
     }
   }
 
-  @include respond(tab-port) {
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
     position: relative;
     transform: rotate(0);
     padding: 4rem;

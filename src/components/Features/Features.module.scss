@@ -30,12 +30,12 @@
   max-width: $maxWidth;
   gap: 3rem;
 
-  @include respond(tab-port) {
+  @include respond(tab-land) {
     flex-wrap: wrap;
     justify-content: center;
   }
 
-  @include respond(tab-port) {
+  @include respond(phone) {
     flex-direction: column;
     max-width: 50rem;
   }

@@ -11,13 +11,13 @@
   transition: all 0.3s;
   flex: 0 1 25%;
 
-  @include respond(tab-port) {
+  @include respond(tab-land) {
     flex: 0 0 45%;
     padding: 2rem;
     font-size: 1.6rem;
   }
 
-  @include respond(tab-port) {
+  @include respond(phone) {
     flex: 1;
     padding: 2rem;
     font-size: 1.6rem;

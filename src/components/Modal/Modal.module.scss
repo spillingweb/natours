@@ -7,13 +7,20 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  backdrop-filter: blur(10px) brightness(60%);
+  background-color: rgba($black, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 30;
   opacity: 0;
   visibility: hidden;
+
+  @supports (
+    (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))
+  ) {
+    backdrop-filter: blur(10px);
+    background-color: rgba($black, 0.3);
+  }
 
   &:target {
     opacity: 1;
@@ -50,7 +57,7 @@
   @include respond(tab-port) {
     display: none;
   }
-  
+
   .img1 {
     background: url(../../assets/img/nat-8.jpg);
   }

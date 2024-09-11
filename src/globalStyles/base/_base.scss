@@ -1,4 +1,5 @@
 @use "../abstract/mixins" as *;
+@use "../abstract/variables" as *;
 
 *,
 *::after,
@@ -28,4 +29,9 @@ html {
 
 body {
   box-sizing: border-box;
+}
+
+::selection {
+  background-color: $primary;
+  color: $white;
 }

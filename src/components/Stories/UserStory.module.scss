@@ -40,8 +40,8 @@
   width: 15rem;
   float: left;
   transform: translate(-3rem, -1rem) skewX(12deg);
-  -webkit-clip-path: circle(50% at 50% 50%);
-  clip-path: circle(50% at 50% 50%);
+  border-radius: 50%;
+  overflow: hidden;
   -webkit-shape-outside: circle(50% at 50% 50%);
   shape-outside: circle(50% at 50% 50%);
   display: flex;
@@ -72,17 +72,18 @@
     transition: all 0.3s;
     opacity: 0;
     text-align: center;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
   }
 }
 
 .textContainer {
-    transform: skewX(12deg);
-    margin-left: -3rem;
-    margin-top: -1rem;
-    hyphens: auto;
+  transform: skewX(12deg);
+  margin-left: -3rem;
+  margin-top: -1rem;
+  hyphens: auto;
 
-    @include respond(phone) {
-      transform: skew(0);
-    }
+  @include respond(phone) {
+    transform: skew(0);
+  }
 }
