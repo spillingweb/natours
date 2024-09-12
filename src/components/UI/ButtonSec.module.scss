@@ -1,24 +1,24 @@
 @use "../../globalStyles/abstract/variables" as *;
 
 .secondaryButton {
-  border: none;
   background-color: transparent;
   color: $primary;
   display: inline-block;
-  text-decoration: none;
-  border-bottom: 1px solid $primary;
-  padding: 0.3rem;
-  transition: all 0.2s;
+  text-decoration-line: 1px solid $primary;
+  text-underline-offset: .7rem;
+  padding: 0.5rem;
+  transition: translate 0.2s;
 
   &:hover {
     background-color: $primary;
+    text-decoration: none;
     color: $white;
-    transform: translateY(-0.2rem);
+    translate: 0 -0.2rem;
     box-shadow: 0 1rem 2rem rgba($black, 0.25);
   }
 
   &:active {
     box-shadow: 0 0.5rem 1rem rgba($black, 0.15);
-    transform: translateY(0);
+    translate: 0;
   }
 }

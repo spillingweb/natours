@@ -46,7 +46,7 @@
   position: absolute;
   top: 40%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  translate: -50% -50%;
   text-align: center;
 }
 
@@ -86,27 +86,27 @@
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-10rem);
+    translate: -10rem 0;
   }
   80% {
-    transform: translateX(1rem);
+    translate: 1rem 0;
   }
   100% {
     opacity: 1;
-    transform: translate(0);
+    translate: 0;
   }
 }
 
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(10rem);
+    translate: 10rem 0;
   }
   80% {
-    transform: translateX(-1rem);
+    translate: -1rem 0;
   }
   100% {
     opacity: 1;
-    transform: translate(0);
+    translate: 0;
   }
 }

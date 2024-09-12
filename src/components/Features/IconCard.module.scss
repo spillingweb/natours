@@ -19,15 +19,12 @@
 
   @include respond(phone) {
     flex: 1;
-    padding: 2rem;
-    font-size: 1.6rem;
   }
 
-  &:hover {
-    transform: scale(1.03) translateY(-1.5rem);
-    
-    @include respond(tab-port) {
-      transform: none;
+  @media only screen and (hover: hover) {
+    &:hover {
+      scale: 1.03;
+      translate: 0 -1.5rem;
     }
   }
 

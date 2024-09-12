@@ -41,5 +41,5 @@
 .inputElement:placeholder-shown + .inputLabel {
   visibility: hidden;
   opacity: 0;
-  transform: translateY(-4rem);
+  translate: 0 -4rem;
 }

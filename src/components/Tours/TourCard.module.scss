@@ -11,12 +11,14 @@
     margin-right: 5rem;
   }
 
-  &:hover .front {
-    transform: rotateY(-180deg);
-  }
+  &:hover {
+    .front{
+      rotate: y -180deg;
+    }
 
-  &:hover .back {
-    transform: rotateY(0);
+    .back {
+      rotate: y 0deg;
+    }
   }
 
   @include respond(tab-port) {
@@ -36,7 +38,7 @@
     border-radius: 3px;
 
     &:hover .front {
-      transform: none;
+      rotate: y 0deg;
     }
   }
 
@@ -125,7 +127,7 @@
 }
 
 .back {
-  transform: rotateY(180deg);
+  rotate: y 180deg;
   position: absolute;
   top: 0;
   left: 0;
@@ -145,7 +147,7 @@
 
   @media only screen and (max-width: 56.25em), only screen and (hover: none) {
     position: relative;
-    transform: rotate(0);
+    rotate: y 0deg;
     padding: 4rem;
     -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
     clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
