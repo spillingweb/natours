@@ -17,4 +17,4 @@ jobs:
                 server: www.spillingweb.com
                 username: spillin1
                 password: ${{ secrets.FTP_PASSWORD }}
-                server-dir: public_html/projects/natours
+                server-dir: public_html/projects/natours/
