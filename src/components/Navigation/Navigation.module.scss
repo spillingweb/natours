@@ -151,18 +151,18 @@
   }
 }
 
-.navCheckbox:checked {
-  & ~ .navBackground {
+.navOpen {
+  .navBackground {
     scale: 80;
   }
 
-  & ~ .navigation {
+  .navigation {
     opacity: 1;
     visibility: visible;
     width: 100%;
   }
 
-  & ~ .hamburger {
+  .hamburger {
     .line {
       background-color: transparent;
     }
